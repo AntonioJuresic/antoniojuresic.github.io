@@ -84,8 +84,16 @@ a:active {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+
+    @media (max-width: $breakpoint) {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    @media (min-width: $breakpoint) {
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
     min-height: calc(100vh - 2 * 1.953rem);
     margin: 1.953rem;
@@ -95,6 +103,12 @@ header {
     .text-container {
         max-width: $breakpoint;
         box-sizing: border-box;
+
+        .hide-on-size {
+            @media (max-width: $breakpoint) {
+                display: none;
+            }
+        }
     }
 
     nav {
