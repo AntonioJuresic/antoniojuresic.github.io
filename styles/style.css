@@ -172,5 +172,5 @@ hr {
 }
 
 .narrow-width {
-  width: 576px;
+  max-width: 576px;
 }/*# sourceMappingURL=style.css.map */
